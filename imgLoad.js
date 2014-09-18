@@ -43,7 +43,7 @@ if (imgLoad.cached > 0) { // If any images are cached...
 	
 	if (imgLoad.uncached == 0) { // If all images are cached...
 	
-		imgLoad.run(imgLoad.reason);
+		imgLoad.run();
 	
 	}
 	else { // If only some are cached...
@@ -55,7 +55,7 @@ if (imgLoad.cached > 0) { // If any images are cached...
 			
 			if (imgLoad.uncached == 0) {
 			
-				imgLoad.run(imgLoad.reason);
+				imgLoad.run();
 			
 			}
 		
@@ -68,7 +68,7 @@ else { // If all images are loading for the first time...
 	
 	$(window).load(function(){
 	
-		imgLoad.run(imgLoad.reason);
+		imgLoad.run();
 		
 		$('img.still-loading').removeClass('still-loading');
 	
